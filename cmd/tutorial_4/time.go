@@ -1,3 +1,4 @@
+/*
 package main
 
 import (
@@ -22,3 +23,5 @@ func timeLoop(slice []int, n int) time.Duration{
 	}
 	return time.Since(t0)
 }
+
+*/
