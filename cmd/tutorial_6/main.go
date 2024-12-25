@@ -10,12 +10,33 @@ type gasEngine struct {
 
 }
 
+type electricEngine struct {
+	mpkhw uint8
+	kwh uint8
+}
+
 func (e gasEngine) milesLeft() uint8 {
-	return e.gallons*e.mpg
+	return e.gallons * e.mpg
+}
+
+func (e electricEngine) milesLeft() uint8 {
+	return e.kwh * e.mpkhw
+}
+
+type engine interface {
+	milesLeft() uint8
+}
+
+func canMakeIt(e engine, miles uint8) {
+	if miles >= e.milesLeft() {
+		fmt.Println("You can make it there")
+	}else {
+		fmt.Println("Need to fuel up first")
+	}
 }
 
 func main() {
 
-	var  myEngine gasEngine = gasEngine{30, 10}
-	fmt.Printf("Total miles left in tank: %v", myEngine.milesLeft())
+	var  myEngine electricEngine = electricEngine{30, 10}
+	canMakeIt(myEngine, 50)
 }
