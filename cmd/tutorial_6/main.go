@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"structs"
 )
 
 type gasEngine struct {
@@ -18,5 +17,5 @@ func (e gasEngine) milesLeft() uint8 {
 func main() {
 
 	var  myEngine gasEngine = gasEngine{30, 10}
-	fmt.Println(myEngine.mpg, myEngine.gallons)
+	fmt.Printf("Total miles left in tank: %v", myEngine.milesLeft())
 }
