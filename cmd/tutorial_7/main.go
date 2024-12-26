@@ -8,6 +8,7 @@ func main() {
 	fmt.Printf("\nThe memory location of the thing1 array is: %p", &thing1)
 	var result [5]float64 = square(&thing1)
 	fmt.Printf("\nThe result is: %v", result)
+	fmt.Printf("\nThe thing1 is: %v", thing1)
 }
 
 func square(thing2 *[5]float64) [5]float64{
