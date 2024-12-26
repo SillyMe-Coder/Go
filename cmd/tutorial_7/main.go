@@ -14,4 +14,7 @@ func main() {
 
 	fmt.Printf("\nThe value  p points to is: %v", *p)
 	fmt.Printf("\nThe value of i is: %v", i)
+
+	var k int32 = 2
+	i = k
 }
