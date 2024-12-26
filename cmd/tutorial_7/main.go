@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-//pointers functions and memory
+//pointers functions and memory pointer
 
 func main() {
 	var thing1 = [5]float64{1, 2, 3, 4, 5}
